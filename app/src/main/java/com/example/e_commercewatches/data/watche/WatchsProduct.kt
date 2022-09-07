@@ -12,7 +12,7 @@ data class Watches(
     var Description: String?,
     var percentSale: String?,
     var rating: Float,
-    var size: List<String>? = listOf()
+    var size: ArrayList<String>? = arrayListOf()
 
     ) : Parcelable {
     constructor(parcel: Parcel) : this(
@@ -170,6 +170,6 @@ fun getWatches() = listOf(
 )
 
 const val description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in libero mollis, rutrum lectus eu, varius justo. Quisque pellentesque eget."
-val size = listOf("S", "M", "L")
-val sizeNumber = listOf("25", "28", "30", "32", "34", "35", "39", "38", "40")
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in libero mollis, rutrum lectus eu, varius justo. Quisque pellentesque eget ,Mauris in libero mollis, varius justo."
+val size = arrayListOf("S", "M", "L")
+val sizeNumber = arrayListOf("25", "28", "30", "32", "34", "35", "39", "38", "40")

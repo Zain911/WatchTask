@@ -16,6 +16,8 @@ class ProductDetailsFragment : Fragment() {
     private var _binding: FragmentProductDetailsBinding? = null
     private val args: ProductDetailsFragmentArgs by navArgs()
     private val binding get() = _binding!!
+    private lateinit var detailsSizeAdapter: ProductDetailsSizeAdapter
+    private var selectedSize: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,6 +27,13 @@ class ProductDetailsFragment : Fragment() {
         _binding = FragmentProductDetailsBinding.inflate(inflater, container, false)
         val root: View = binding.root
         setUI(args.watchesModel)
+        detailsSizeAdapter = args.watchesModel.size?.let {
+            ProductDetailsSizeAdapter(it) {
+                selectedSize = it
+
+            }
+        }!!
+        binding.productSizeRecycler.adapter=detailsSizeAdapter
         return root
     }
 
@@ -34,6 +43,7 @@ class ProductDetailsFragment : Fragment() {
         binding.priceBeforeSaleTextView.text = productDetails.priceBeforeSale
         binding.descriptionTextView.text = productDetails.Description
         binding.ratingBar.rating = productDetails.rating
+        binding.productImageView.setImageResource(productDetails.image)
 
 
     }
