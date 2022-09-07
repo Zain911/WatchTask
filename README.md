@@ -1,20 +1,18 @@
 # WatchTask
-WatchTask is simple  e-commerce mobile application integrated with static data ,
-with lots of features –cart, fast search, filter and sorting options, Slider with smooth transition effects and a lot more.
+WatchTask is simple e-commerce application integrated with static data
 
 ## Features
-*slider for ads.
-*show products item.
-*show product details.
+* Slider for ads.
+* Show products item.
+* Show product details.
 * Add products to cart. 
-*increase and decrease quantity item with realtime update 
+* Increase and decrease quantity item with realtime update 
 
 
 ## Technologies
 * MVVM architectural pattern
 * Room database
 * Dependency injection using hilt
-* Repository design pattern
 * Coroutines
 * UseCase
 * LiveData 
