@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.e_commercewatches.data.entity.watche.Watches
+import com.example.e_commercewatches.data.entity.watche.sizeNumber
 import com.example.e_commercewatches.databinding.FragmentProductDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,10 +31,11 @@ class ProductDetailsFragment : Fragment() {
         val root: View = binding.root
         setUI(args.watchesModel)
 
-        detailsSizeAdapter = ProductDetailsSizeAdapter(args.watchesModel.size!!) {
+        selectedSizeFromUser = sizeNumber[0]
+
+        detailsSizeAdapter = ProductDetailsSizeAdapter(sizeNumber) {
             selectedSizeFromUser = it
         }
-
         binding.backButtonImageView.setOnClickListener { findNavController().navigateUp() }
         binding.productSizeRecycler.adapter = detailsSizeAdapter
 

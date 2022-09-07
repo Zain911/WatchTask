@@ -11,7 +11,7 @@ import com.example.e_commercewatches.data.entity.watche.Watches
 import com.example.e_commercewatches.databinding.ItemBrandsBinding
 
 class ProductAdapter(
-    var vendorList: MutableList<Watches>,
+    private var vendorList: MutableList<Watches>,
     private val onVendorClicked: (Watches) -> Unit,
 ) :
     RecyclerView.Adapter<ProductAdapter.VendorViewHolder>() {

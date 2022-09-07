@@ -6,6 +6,9 @@ import com.example.e_commercewatches.data.entity.watche.Watches
 interface WatchesRepositoryInterface {
 
     fun addWatchToCart(watch: Watches)
-    fun getWatchesFromCart(): LiveData<List<Watches>>
+
+    suspend fun getWatchesFromCart(): LiveData<List<Watches>>
+
+    fun updateItem(watch: Watches)
 
 }

@@ -2,6 +2,7 @@ package com.example.e_commercewatches.di
 
 import com.example.e_commercewatches.data.presistentstorage.room.CartDao
 import com.example.e_commercewatches.data.repository.WatchesRepository
+import com.example.e_commercewatches.data.repository.WatchesRepositoryInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,7 +17,7 @@ object RepositoryModule {
     @Provides
     fun provideWatchesRepository(
         cartDao: CartDao,
-    ): WatchesRepository {
+    ): WatchesRepositoryInterface {
         return WatchesRepository(cartDao)
     }
 

@@ -48,9 +48,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:text="@string/size_name"
         app:layout_constraintStart_toStartOf="@+id/itemCartTitle"
-        app:layout_constraintTop_toBottomOf="@id/itemCartTitle"
-        tools:text="@string/size_name" />
+        app:layout_constraintTop_toBottomOf="@id/itemCartTitle" />
 
     <TextView
         android:id="@+id/sizeTextView"

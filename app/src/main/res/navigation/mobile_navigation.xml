@@ -29,8 +29,10 @@
             android:name="watchesModel"
             app:argType="com.example.e_commercewatches.data.entity.watche.Watches" />
     </fragment>
-
-
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.e_commercewatches.ui.cart.CartFragment"
+        android:label="CartFragment" />
 
 
 </navigation>

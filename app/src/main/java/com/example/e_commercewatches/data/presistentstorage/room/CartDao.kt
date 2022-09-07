@@ -9,16 +9,16 @@ import com.example.e_commercewatches.data.entity.watche.Watches
 @Dao
 interface CartDao {
     @Insert(onConflict = REPLACE)
-    fun addToCart(itemCart: Watches)
+    fun addToCart(watch: Watches)
 
     @Query("Select * From Watches")
     fun getCartProducts(): LiveData<List<Watches>>
 
     @Delete
-    fun deleteItem(itemCart: Watches)
+    fun deleteItem(watch: Watches)
 
     @Update
-    fun updateItem(itemCart: Watches)
+    fun updateItem(watch: Watches)
 
     @Query("SELECT COUNT(id) FROM Watches")
     fun getCartItemsCount(): LiveData<Int>

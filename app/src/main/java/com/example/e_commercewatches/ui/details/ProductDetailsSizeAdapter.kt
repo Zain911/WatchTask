@@ -14,7 +14,7 @@ class ProductDetailsSizeAdapter(
     private val arrayList: ArrayList<String>,
     val clickItem: (String) -> Unit,
 ) : RecyclerView.Adapter<ProductDetailsSizeAdapter.ViewHolder>() {
-    var checkedItemPosition = MutableLiveData(0)
+    private var checkedItemPosition = MutableLiveData(0)
     lateinit var item: String
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

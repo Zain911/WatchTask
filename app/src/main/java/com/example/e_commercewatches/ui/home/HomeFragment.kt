@@ -25,12 +25,12 @@ class HomeFragment : Fragment() {
 
     private val viewModel: HomeViewModel by viewModels()
     private var _binding: FragmentHomeBinding? = null
-    lateinit var job: Job
+    private lateinit var job: Job
     private val binding get() = _binding!!
 
     private lateinit var viewPager: ViewPager2
     private lateinit var viewPagerAdapter: SliderViewPagerAdapter
-    private var dots: Array<TextView?> = arrayOfNulls<TextView>(getImage().size)
+    private var dots: Array<TextView?> = arrayOfNulls(getImage().size)
 
 
     private var onImageSliderChange = object : ViewPager2.OnPageChangeCallback() {
