@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.e_commercewatches.data.watche.Watches
 import com.example.e_commercewatches.databinding.FragmentProductDetailsBinding
@@ -33,7 +34,8 @@ class ProductDetailsFragment : Fragment() {
 
             }
         }!!
-        binding.productSizeRecycler.adapter=detailsSizeAdapter
+        binding.backButtonImageView.setOnClickListener { findNavController().navigateUp() }
+        binding.productSizeRecycler.adapter = detailsSizeAdapter
         return root
     }
 

@@ -67,7 +67,7 @@
     <RatingBar
         android:id="@+id/ratingBar"
         style="?android:attr/ratingBarStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:isIndicator="false"
@@ -85,7 +85,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
         app:layout_constraintStart_toEndOf="@+id/brandNameTextView"
         app:layout_constraintTop_toTopOf="@+id/ratingBar"
-        tools:text="(4800 review )" />
+        android:text="@string/reviews"/>
 
     <TextView
         android:id="@+id/priceAfterSaleTextView"
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/brandNameTextView"
         app:layout_constraintTop_toBottomOf="@id/ratingBar"
@@ -101,8 +101,8 @@
 
     <View
         android:layout_width="0dp"
-        android:layout_height=".5dp"
-        android:background="@color/gray_medium"
+        android:layout_height="2dp"
+        android:background="@color/gray"
         app:layout_constraintBottom_toBottomOf="@+id/priceBeforeSaleTextView"
         app:layout_constraintEnd_toEndOf="@+id/priceBeforeSaleTextView"
         app:layout_constraintStart_toStartOf="@+id/priceBeforeSaleTextView"
@@ -118,7 +118,7 @@
         app:layout_constraintStart_toEndOf="@+id/priceAfterSaleTextView"
         app:layout_constraintTop_toTopOf="@+id/priceAfterSaleTextView"
         tools:text="$200"
-        tools:textSize="11sp" />
+        tools:textSize="12sp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -158,9 +158,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/product_sizeRecycler"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:orientation="horizontal"
+
         android:padding="12dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:spanCount="1"
@@ -176,20 +177,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/primary_color"
         android:gravity="center"
         android:padding="16dp"
-        android:textSize="16sp"
         android:text="@string/add_cart"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/product_sizeRecycler"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
