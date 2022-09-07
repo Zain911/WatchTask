@@ -12,16 +12,16 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.example.e_commercewatches.R
-import com.example.e_commercewatches.data.ads.getImage
-import com.example.e_commercewatches.data.watche.Watches
-import com.example.e_commercewatches.data.watche.getWatches
+import com.example.e_commercewatches.data.entity.ads.getImage
+import com.example.e_commercewatches.data.entity.watche.Watches
+import com.example.e_commercewatches.data.entity.watche.getWatches
 import com.example.e_commercewatches.databinding.FragmentHomeBinding
 
 import kotlinx.coroutines.*
 
 class HomeFragment : Fragment() {
 
-    private lateinit var vendorAdapter: VendorAdapter
+    private lateinit var productAdapter: ProductAdapter
 
     private val viewModel: HomeViewModel by viewModels()
     private var _binding: FragmentHomeBinding? = null
@@ -65,13 +65,13 @@ class HomeFragment : Fragment() {
             }
         }
 
-        vendorAdapter = VendorAdapter(arrayListOf()) {
+        productAdapter = ProductAdapter(arrayListOf()) {
             viewModel.navigateToProductDetails(it, binding.root)
 
         }
-        binding.brandsRecyclerView.adapter = vendorAdapter
+        binding.brandsRecyclerView.adapter = productAdapter
 
-      vendorAdapter.changeList(getWatches() as MutableList<Watches>)
+      productAdapter.changeList(getWatches() as MutableList<Watches>)
 
 
         return root

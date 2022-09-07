@@ -13,5 +13,9 @@
     <string name="title_favourite">Favourites</string>
     <string name="title_cart">Cart</string>
     <string name="title_profile">Profile</string>
+    <string name="size_name">Size :</string>
+    <string name="my_cart">My Cart</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="total">Total</string>
 
 </resources>

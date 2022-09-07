@@ -3,7 +3,7 @@ package com.example.e_commercewatches.ui.home
 import android.view.View
 import androidx.lifecycle.ViewModel
 import androidx.navigation.Navigation
-import com.example.e_commercewatches.data.watche.Watches
+import com.example.e_commercewatches.data.entity.watche.Watches
 
 
 class HomeViewModel : ViewModel() {

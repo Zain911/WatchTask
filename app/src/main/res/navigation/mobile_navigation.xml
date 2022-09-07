@@ -27,7 +27,7 @@
         tools:layout="@layout/fragment_product_details">
         <argument
             android:name="watchesModel"
-            app:argType="com.example.e_commercewatches.data.watche.Watches" />
+            app:argType="com.example.e_commercewatches.data.entity.watche.Watches" />
     </fragment>
 
 

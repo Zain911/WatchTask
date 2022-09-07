@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/background_border_item_cart"
+    android:elevation="4dp"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/itemCartImage"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/background_image_item_cart"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/watch2"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/itemCartTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:lines="1"
+
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/itemCartImage"
+        app:layout_constraintTop_toTopOf="@id/itemCartImage"
+        tools:text=" Disney Donald Duck T-Shirt" />
+
+
+    <TextView
+        android:id="@+id/sizeNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/itemCartTitle"
+        app:layout_constraintTop_toBottomOf="@id/itemCartTitle"
+        tools:text="@string/size_name" />
+
+    <TextView
+        android:id="@+id/sizeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/sizeNameTextView"
+        app:layout_constraintStart_toEndOf="@+id/sizeNameTextView"
+        app:layout_constraintTop_toTopOf="@+id/sizeNameTextView"
+        tools:text="XXL" />
+
+    <TextView
+        android:id="@+id/itemCartPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/itemCartTitle"
+        app:layout_constraintTop_toBottomOf="@id/sizeNameTextView"
+        tools:text="60.00" />
+
+    <LinearLayout
+        android:id="@+id/containerCounterLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/border_order_counter"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="@+id/itemCartPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizeNameTextView">
+
+        <ImageButton
+            android:id="@+id/decreaseButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_min"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/itemCountText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:text="12" />
+
+        <ImageButton
+            android:id="@+id/increaseButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            app:srcCompat="@drawable/ic_add"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

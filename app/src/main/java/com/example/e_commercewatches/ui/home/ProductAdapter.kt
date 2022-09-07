@@ -7,14 +7,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.e_commercewatches.R
 
-import com.example.e_commercewatches.data.watche.Watches
+import com.example.e_commercewatches.data.entity.watche.Watches
 import com.example.e_commercewatches.databinding.ItemBrandsBinding
 
-class VendorAdapter(
+class ProductAdapter(
     var vendorList: MutableList<Watches>,
     private val onVendorClicked: (Watches) -> Unit,
 ) :
-    RecyclerView.Adapter<VendorAdapter.VendorViewHolder>() {
+    RecyclerView.Adapter<ProductAdapter.VendorViewHolder>() {
 
     @SuppressLint("NotifyDataSetChanged")
     fun changeList(list: MutableList<Watches>) {
@@ -32,6 +32,7 @@ class VendorAdapter(
         return VendorViewHolder(binding)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: VendorViewHolder, position: Int) {
         val item = vendorList[position]
         Glide.with(holder.view.brandImageView.context)
@@ -40,8 +41,8 @@ class VendorAdapter(
             .into(holder.view.brandImageView)
 
         holder.view.brandNameTextView.text = vendorList[position].name
-        holder.view.priceBeforeSaleTextView.text=vendorList[position].priceBeforeSale
-        holder.view.priceAfterSaleTextView.text=vendorList[position].priceAfterSale
+        holder.view.priceBeforeSaleTextView.text= "$${vendorList[position].priceBeforeSale}"
+        holder.view.priceAfterSaleTextView.text="$${vendorList[position].priceAfterSale}"
         holder.view.salePercentTextView.text=vendorList[position].percentSale
         holder.view.root.setOnClickListener { onVendorClicked(item) }
     }

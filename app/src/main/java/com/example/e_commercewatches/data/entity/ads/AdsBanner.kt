@@ -1,4 +1,4 @@
-package com.example.e_commercewatches.data.ads
+package com.example.e_commercewatches.data.entity.ads
 
 import com.example.e_commercewatches.R
 
