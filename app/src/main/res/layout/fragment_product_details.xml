@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/background_item_detials"
+        android:paddingTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButtonImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/product_imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/watch1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/product_linearLayoutDots"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@id/product_imageView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/brandNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:text="watches apple" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:isIndicator="false"
+        android:progressTint="#FCBF0C"
+        android:rating="5"
+        app:layout_constraintStart_toStartOf="@+id/brandNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/brandNameTextView" />
+
+    <TextView
+        android:id="@+id/reviewTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+        app:layout_constraintStart_toEndOf="@+id/brandNameTextView"
+        app:layout_constraintTop_toTopOf="@+id/ratingBar"
+        tools:text="(4800 review )" />
+
+    <TextView
+        android:id="@+id/priceAfterSaleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/brandNameTextView"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        tools:text="$100" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height=".5dp"
+        android:background="@color/gray_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/priceBeforeSaleTextView"
+        app:layout_constraintEnd_toEndOf="@+id/priceBeforeSaleTextView"
+        app:layout_constraintStart_toStartOf="@+id/priceBeforeSaleTextView"
+        app:layout_constraintTop_toTopOf="@+id/priceBeforeSaleTextView" />
+
+    <TextView
+        android:id="@+id/priceBeforeSaleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/priceAfterSaleTextView"
+        app:layout_constraintStart_toEndOf="@+id/priceAfterSaleTextView"
+        app:layout_constraintTop_toTopOf="@+id/priceAfterSaleTextView"
+        tools:text="$200"
+        tools:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/available_in_stock"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/priceAfterSaleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/priceAfterSaleTextView" />
+
+    <TextView
+        android:id="@+id/AboutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/about"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/priceAfterSaleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/priceAfterSaleTextView" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dummy_description"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/AboutTextView"
+        app:layout_constraintTop_toBottomOf="@+id/AboutTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_sizeRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+    <Button
+        android:id="@+id/product_buyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/primary_color"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:text="@string/add_cart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_sizeRecycler"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

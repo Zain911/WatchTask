@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/drawable-v24/background_item_corner.xml" value="0.1735" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/drawable-v24/ic_baseline_favorite_24.xml" value="0.1735" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/drawable-v24/size_checkbox_selector.xml" value="0.204" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/drawable-v24/size_deselect.xml" value="0.203" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/drawable-v24/size_select.xml" value="0.204" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/drawable/background_item_detials.xml" value="0.1735" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.124" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1735" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1735" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/layout/activity_main.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/layout/fragment_home.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/layout/fragment_order_details.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/layout/fragment_product_details.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/layout/fragment_product_details_edit.xml" value="0.22" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/layout/item_brands.xml" value="0.5" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/layout/item_product_details_size.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Ghaly/Desktop/EcommerceWatches/app/src/main/res/layout/slider_item.xml" value="0.19635416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

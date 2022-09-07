@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">E-commerce Watches</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="user_name">Hello Rocky 🤗</string>
+    <string name="lets_gets_somethings">Lets gets Somethings?</string>
+    <string name="dummy_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in libero mollis, rutrum lectus eu, varius justo. Quisque pellentesque eget.</string>
+    <string name="available_in_stock">Available in stock</string>
+    <string name="about">About</string>
+    <string name="add_cart">Add to cart</string>
+
+</resources>

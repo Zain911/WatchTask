@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/nameUserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:paddingTop="12dp"
+        android:text="@string/user_name"
+        android:textColor="#000000"
+        android:textColorLink="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/containerCardViewForViewPager"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeMsgTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:text="@string/lets_gets_somethings"
+        app:layout_constraintStart_toStartOf="@+id/nameUserTextView"
+        app:layout_constraintTop_toBottomOf="@+id/nameUserTextView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerCardViewForViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeMsgTextView">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/adsViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            tools:background="@drawable/ads5" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutDots"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:background="@color/white"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/containerCardViewForViewPager"
+        app:layout_constraintEnd_toEndOf="@+id/containerCardViewForViewPager"
+        app:layout_constraintStart_toStartOf="@+id/containerCardViewForViewPager"
+        app:layout_constraintTop_toBottomOf="@id/containerCardViewForViewPager" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:paddingTop="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutDots">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/brandsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:spanCount="2"
+
+            tools:listitem="@layout/item_brands" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
